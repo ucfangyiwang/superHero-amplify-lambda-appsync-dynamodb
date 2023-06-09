@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.7.1",
+    "@as-integrations/aws-lambda": "^2.0.1",
+    "@aws-sdk/client-dynamodb": "^3.345.0",
+    "@aws-sdk/util-dynamodb": "^3.345.0",
+    "apollo-server-lambda": "^3.12.0",
+    "aws-sdk": "^2.1390.0",
+    "axios": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "graphql": "^16.6.0",
+    "i": "^0.3.7",
+    "npm": "^9.6.7"
+  }
+}

@@ -1,0 +1,38 @@
+
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+
+type Query {
+    searchHerobyName(name: String!): [Hero] @function(name:"Hero-${env}")
+    searchHerobyId(id: ID!): Hero  @function(name:"Hero-${env}")
+    getSaveHeros:[Hero!]  @function(name:"Hero-${env}")
+}
+type Mutation{
+    editHero (input:HeroInput):Hero @function(name:"Hero-${env}")
+    saveHero (input:HeroInput):Hero @function(name:"Hero-${env}")
+    deleteHerofromSave(id:ID!):Hero @function(name:"Hero-${env}")
+}
+type Hero @model {
+  id: ID
+  name: String
+  intelligence: String
+  strength: String
+  speed: String
+  durability: String
+  power: String
+  combat: String
+  image: String
+  isSave: Boolean 
+}
+
+input HeroInput {
+    id: ID
+    name: String
+    intelligence: String
+    strength: String
+    speed: String
+    durability: String
+    power: String
+    combat: String
+    image: String
+}
